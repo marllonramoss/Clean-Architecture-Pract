@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "migrate:make": "knex migrate:make --knexfile ./src/example/adapters/db/knex/knexfile.ts --knexpath ./src/example/adapters/db/knex",
+    "migrate:down": "knex migrate:down --knexfile ./src/example/adapters/db/knex/knexfile.ts ",
+    "migrate:up": "knex migrate:up --knexfile ./src/example/adapters/db/knex/knexfile.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +20,11 @@
   },
   "dependencies": {
     "@types/bcrypt": "^5.0.2",
+    "@types/dotenv": "^8.2.0",
     "@types/node": "^20.11.30",
-    "bcrypt": "^5.1.1"
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "pg": "^8.11.5"
   }
 }

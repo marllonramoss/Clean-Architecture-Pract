@@ -1,4 +1,4 @@
-import Cryptography from "../../adapters/Cryptography"
+import Cryptography from "../../adapters/auth/Cryptography"
 import UserColection from "./UserColection"
 
 

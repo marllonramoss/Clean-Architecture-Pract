@@ -1,4 +1,4 @@
-import PasswordProvider from '../core/user/PasswordProvider'
+import PasswordProvider from '../../core/user/PasswordProvider'
 import bcrypt from 'bcrypt'
 
 export default class Cryptography implements PasswordProvider{
