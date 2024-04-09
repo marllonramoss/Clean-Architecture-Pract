@@ -1,6 +1,6 @@
 import Cryptography from "../../adapters/auth/Cryptography"
 import UserColection from "./UserColection"
-
+import uuid from '../shared/Id'
 
 export default class RegisterUser {
     
@@ -10,7 +10,7 @@ export default class RegisterUser {
         const CriptoPassword = this.passwordProvider.cript(password)
 
         const user = {
-            id: Math.random(),
+            id: uuid.gerar(),
             name,
             email,
             password: CriptoPassword
