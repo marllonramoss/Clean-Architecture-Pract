@@ -1,7 +1,7 @@
 import User from "./User";
 import UserColection from "../user/UserColection"
-import PasswordProvider from "./PasswordProvider";
-
+import PasswordProvider from "./PasswordProvider"
+import UUID from "../shared/Id"
 export default class UserRegister {
      constructor( private colection: UserColection, private passwordProvider: PasswordProvider){}
 
@@ -9,7 +9,7 @@ export default class UserRegister {
         const newPassword = this.passwordProvider.cript(password)
 
         const user: User = {
-            id: Math.random(),
+            id: UUID.gerar(),
             name,
             email,
             password: newPassword
