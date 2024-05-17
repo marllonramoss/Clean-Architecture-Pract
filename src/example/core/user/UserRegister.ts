@@ -5,8 +5,11 @@ import UUID from "../shared/Id"
 export default class UserRegister {
      constructor( private colection: UserColection, private passwordProvider: PasswordProvider){}
 
-    execute(name: string, email: string, password: string){
+    async execute(name: string, email: string, password: string): Promise<User>{
         const newPassword = this.passwordProvider.cript(password)
+
+       const usuarioExistente = await this.colection.searchByEmail(email)
+        if(usuarioExistente) throw new Error('User already exists')
 
         const user: User = {
             id: UUID.gerar(),
