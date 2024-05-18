@@ -1,7 +1,7 @@
-import Cryptography from "../src/example/adapters/auth/Cryptography"
-import DbOnMemory from "../src/example/adapters/db/UserOnMemory"
-import RegisterUser from "../src/example/core/user/RegisterUser"
-import UserRegister from "../src/example/core/user/UserRegister"
+import Cryptography from "../src/adapters/auth/Cryptography"
+import DbOnMemory from "../src/adapters/db/UserOnMemory"
+import RegisterUser from "../src/core/user/RegisterUser"
+import UserRegister from "../src/core/user/UserRegister"
 
 test('Want to insert a user on DbOnMemory with encrypted password', async () => {
     const db = new DbOnMemory()
