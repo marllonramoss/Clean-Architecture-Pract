@@ -6,7 +6,7 @@ dotenv.config({path: "../../../../.env"});
 module.exports = {
 
 client: "pg",
-connection: DB_URL,
+connection: process.env.DB_URL,
 migrations: {
   tableName: "knex_migrations",
 },
